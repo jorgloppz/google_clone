@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;;
+}
+
+header nav .nav-right-section{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-right-section a{
+    margin-right: 10px;
+    color: #000000;
+}
+
+nav .nav-right-section .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main{
+    margin-top: 150px;
+    text-align: center;
+}
+main .main-logo{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-logo img{
+    width: 300px;
+}
+
+main .main-input{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-input-container{
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+main .main-input-container:hover{
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+main .main-input .search-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+main .main-input .micro-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    display: inline-block;
+}
+
+main .main-buttons button{
+    height: 36px;
+    border: 0;
+    background-color: #f2f2f2;
+    color: #5f6368;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 0 15px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+main .main-buttons button:hover{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 6px 0 #20212447;
+    background-color: #e8eaed;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+footer .footer-left{
+    justify-self: left;
+}
+footer .footer-right{
+    justify-self: right;
+}
+footer ul li a{
+    margin: 10px;
+    color: #5f6368
+}
+
+/* Breakpoint para tablets */
+@media (max-width: 900px){
+    main .main-logo,
+    main .main-input,
+    main .main-buttons,
+    main .main-input-container {
+        width: 90%;
+        margin: 0 auto 20px auto;
+    }
+    main .main-logo img {
+        width: 220px;
+    }
+    main .main-input input {
+        width: 80%;
+    }
+    main .main-buttons button {
+        font-size: 13px;
+        padding: 0 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px){
+    main .main-logo{
+        width: 100%;
+    }
+    main .main-input{
+        width: 100%;
+    }
+    main .main-buttons{
+        width: 100%;
+    }
+    main .main-input-container{
+        width: 100%;
+    }
+    main .main-input input{
+        width: calc(100% - 50px);
+    }
+    main .main-logo img{
+        width: 180px;
+    }
+    main .main-buttons button{
+        font-size: 12px;
+        padding: 0 8px;
+        margin-right: 8px;
+    }
+    footer{
+        font-size: 12px;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        position: static;
+        text-align: center;
+    }
+    footer .footer-left,
+    footer .footer-right{
+        justify-self: center;
+        margin-bottom: 5px;
+    }
+    footer ul{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    footer ul li a{
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 400px){
+    header nav .nav-right-section{
+        width: 200px;
+    }
+    header nav .nav-right-section img{
+        width: 25px;
+        height: 25px;
+    }
+    main .main-logo img{
+        width: 250px;
+    }
+    main .main-logo img{
+        width: 120px;
+    }
+    main .main-input-container{
+        width: 95%;
+        min-width: 180px;
+    }
+    main .main-input input{
+        width: 70%;
+        min-width: 80px;
+    }
+    main .main-buttons button{
+        font-size: 11px;
+        padding: 0 5px;
+        margin-right: 5px;
+    }
+    footer{
+        font-size: 11px;
+    }
+}
